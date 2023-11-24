@@ -18,25 +18,25 @@
 /* ----- Smooth Scrolling ----- */
 
 html.lenis {
-    height: auto;
-  }
-  
-  .lenis.lenis-smooth {
-    scroll-behavior: auto;
-  }
-  
-  .lenis.lenis-smooth [data-lenis-prevent] {
-    overscroll-behavior: contain;
-  }
-  
-  .lenis.lenis-stopped {
-    overflow: hidden;
-  }
-  
-  .lenis.lenis-scrolling iframe {
-    pointer-events: none;
-  }
-  
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
 /* ----- Global Styles ----- */
 
 * {
@@ -93,6 +93,10 @@ h3 {
   text-align: center;
 }
 
+.welcome p {
+    text-align: center;
+}
+
 /* ----- Header Styles ----- */
 
 header {
@@ -112,6 +116,24 @@ header nav ul {
 header nav ul li a {
   color: var(--color-brown);
   font-size: 2rem;
+}
+
+.mainNav {
+    text-align: center;
+}
+
+/* Mobile Menu */
+
+.burgerWrapper{
+    display: none;
+}
+
+.burger{
+    height: 0.5rem;
+    width: 3.5rem;
+    background-color: var(--color-brown);
+    margin: 0.5rem;
+    border-radius: 0.5rem;
 }
 
 /* ----- Main Styles ----- */
@@ -306,5 +328,57 @@ fieldset {
   border-style: none;
 }
 
-
 /* Mobile Version */
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (max-width: 576px) {
+  .mainNav {
+    display: none;
+  }
+
+  .burgerWrapper{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+  .roomGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      "twin"
+      "standard"
+      "view"
+      "deluxe";
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    color: var(--color-white);
+    background-color: var(--color-black);
+    padding: 4rem;
+    padding-bottom: 6rem;
+    gap: 2rem;
+    grid-template-areas:
+      "info"
+      "nav"
+      "sub";
+    text-align: center;
+  }
+
+  .info,
+  .phone,
+  .mail {
+    font-size: 1.3rem;
+    margin-left: 0rem;
+    margin-bottom: 0.5rem;
+  }
+}
