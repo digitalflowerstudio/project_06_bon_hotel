@@ -1,31 +1,41 @@
 /* ----- Font Imports ----- */
 
 @font-face {
-    font-family: "Ubuntu";
-    src: url(../fonts/Ubuntu/Ubuntu-Regular.ttf);
-  }
+  font-family: "Ubuntu";
+  src: url(../fonts/Ubuntu/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+  font-family: "UbuntuLight";
+  src: url(../fonts/Ubuntu/Ubuntu-Light.ttf);
+}
+
+@font-face {
+  font-family: "UbuntuBold";
+  src: url(../fonts/Ubuntu/Ubuntu-Bold.ttf);
+}
 
 /* ----- Smooth Scrolling ----- */
 
 html.lenis {
-    height: auto;
-  }
-  
-  .lenis.lenis-smooth {
-    scroll-behavior: auto;
-  }
-  
-  .lenis.lenis-smooth [data-lenis-prevent] {
-    overscroll-behavior: contain;
-  }
-  
-  .lenis.lenis-stopped {
-    overflow: hidden;
-  }
-  
-  .lenis.lenis-scrolling iframe {
-    pointer-events: none;
-  }
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
 
 /* ----- Global Styles ----- */
 
@@ -34,19 +44,267 @@ html.lenis {
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  list-style: none;
 }
 
 :root {
-    --color-brown: #957554;
-    --color-button: #DFAA5B;
-    --color-white: white;
-    --color-black: black;
+  --color-brown: #957554;
+  --color-button: #dfaa5b;
+  --color-white: white;
+  --color-black: black;
 }
 
-/* ----- Font Stylings ----- */
+.yellowButton {
+  background-color: var(--color-button);
+  color: var(--color-white);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.yellowButton:hover {
+  filter: brightness(110%);
+}
+
+/* ----- Font Styles ----- */
 
 html {
-    font-family: 'Ubuntu';
+  font-family: "Ubuntu";
+}
+
+h1 {
+  font-size: 3.5rem;
+  color: var(--color-white);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  color: var(--color-brown);
+  font-size: 2rem;
+}
+
+h3 {
+  color: var(--color-white);
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* ----- Header Styles ----- */
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 5rem;
+}
+
+header nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+header nav ul li a {
+  color: var(--color-brown);
+  font-size: 2rem;
+}
+
+/* ----- Main Styles ----- */
+
+/* Section Hero */
+
+.hero {
+  background-image: url(../img/hero_image.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 16rem;
+  padding-bottom: 16rem;
+}
+
+.hero p {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+/* Section Facilities */
+
+.facilitiesInfo {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.facilitiesInfo p {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+/* Section Rooms */
+
+.roomGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "twin standard"
+    "view deluxe";
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.standardTwinRoom {
+  grid-area: twin;
+  background: url(../img/standard_twin_room.png) center/cover no-repeat;
+}
+
+.standardRoom {
+  grid-area: standard;
+  background: url(../img/standard_room.png) center/cover no-repeat;
+}
+
+.standardViewRoom {
+  grid-area: view;
+  background: url(../img/standard_view_room.png) center/cover no-repeat;
+}
+
+.deluxeRoom {
+  grid-area: deluxe;
+  background: url(../img/deluxe_room.png) center/cover no-repeat;
+}
+
+.roomStyles {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 16%;
+  padding-left: 10%;
+  padding-right: 10%;
+  border-radius: 0.5rem;
+}
+
+/* Section Booking */
+
+.bookingInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 6rem;
+  margin-top: 4rem;
+}
+
+.bookingInfo h2 {
+  font-size: 3rem;
+}
+
+.bookNow {
+  padding-left: 8rem;
+  padding-right: 8rem;
+  margin-top: -1.5rem;
+}
+
+/* ----- Footer Styles ----- */
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: var(--color-white);
+  background-color: var(--color-black);
+  padding: 4rem;
+  padding-bottom: 6rem;
+  gap: 2rem;
+  grid-template-areas: "info nav sub";
+}
+
+.contactInfo {
+  grid-area: info;
+}
+
+.footerNav {
+  grid-area: nav;
+}
+
+.subscribe {
+  grid-area: sub;
+}
+
+/* Info Footer Styles */
+
+.logoFooter {
+  mix-blend-mode: hard-light; /* Blending Gray Background to appear Black */
+  margin-bottom: 3rem;
+}
+
+.info,
+.phone,
+.mail {
+  font-size: 1.3rem;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.info {
+  font-family: "UbuntuBold";
+}
+
+.phone,
+.mail {
+  font-family: "UbuntuLight";
+}
+
+/* Footer Nav Styles */
+
+.footerNav ul li a {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  font-family: "UbuntuLight";
+  line-height: 2;
+}
+
+/* Footer Subscribe Form Styles */
+
+.labelSubscribe {
+  font-family: "UbuntuBold";
+  font-size: 2rem;
+  color: var(--color-white);
+}
+
+fieldset {
+  border-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.subscribe .input_mail {
+  padding: 1rem 0 1rem 1rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  border-style: none;
 }
 
 
+/* Mobile Version */

@@ -18,10 +18,10 @@
 
         <nav>
             <ul>
-                <li><a href="#">Our Hotel</a></li>
-                <li><a href="#">Rooms & Rates</a></li>
-                <li><a href="#">Facilities</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="#" onclick="lenis.scrollTo('#heroAnchor')">Our Hotel</a></li>
+                <li><a href="#" onclick="lenis.scrollTo('#facilityAnchor')">Rooms & Rates</a></li>
+                <li><a href="#" onclick="lenis.scrollTo('#roomsAnchor')">Facilities</a></li>
+                <li><a href="#" onclick="lenis.scrollTo('#contactAnchor')">Contact Us</a></li>
             </ul>
         </nav>
 
@@ -29,17 +29,17 @@
 
     <main>
 
-        <section class="hero">
+        <section class="hero" id="heroAnchor">
 
             <article class="welcome">
                 <h1>Welcome to Bon Hotel</h1>
                 <p>Good people. Good thinking. Good feeling.</p>
-                <a href="#" class="exploreButton">Explore</a>
+                <a href="#" class="yellowButton">Explore</a>
             </article>
 
         </section>
 
-        <section class="facilities">
+        <section class="facilities" id="facilityAnchor">
 
             <h2>Facilities</h2>
 
@@ -74,37 +74,43 @@
 
         </section>
 
-        <section class="rooms">
+        <section class="rooms" id="roomsAnchor">
 
             <h2>Rooms & Rates</h2>
 
-            <article class="standardTwinRoom">
-                <h3>Standard Twin Room</h3>
-                <a href="#" class="yellowButton checkRates">Check Rates</a>
-            </article>
+            <div class="roomGrid">
 
-            <article class="standardRoom">
-                <h3>Standard Room</h3>
-                <a href="#" class="yellowButton checkRates">Check Rates</a>
-            </article>
+                <article class="standardTwinRoom roomStyles">
+                    <h3>Standard Twin Room</h3>
+                    <a href="#" class="yellowButton checkRates">Check Rates</a>
+                </article>
 
-            <article class="standardViewRoom">
-                <h3>Standard View Room</h3>
-                <a href="#" class="yellowButton checkRates">Check Rates</a>
-            </article>
+                <article class="standardRoom roomStyles">
+                    <h3>Standard Room</h3>
+                    <a href="#" class="yellowButton checkRates">Check Rates</a>
+                </article>
 
-            <article class="deluxeRoom">
-                <h3>Deluxe Room</h3>
-                <a href="#" class="yellowButton checkRates">Check Rates</a>
-            </article>
+                <article class="standardViewRoom roomStyles">
+                    <h3>Standard View Room</h3>
+                    <a href="#" class="yellowButton checkRates">Check Rates</a>
+                </article>
+
+                <article class="deluxeRoom roomStyles">
+                    <h3>Deluxe Room</h3>
+                    <a href="#" class="yellowButton checkRates">Check Rates</a>
+                </article>
+
+            </div>
 
         </section>
 
         <section class="booking">
 
             <article class="bookingInfo">
+
                 <h2>Get a room already!</h2>
                 <a href="" class="yellowButton bookNow">Book Now</a>
+
             </article>
 
         </section>
@@ -113,39 +119,46 @@
 
     <footer>
 
-        <article class="contactInfo">
+        <article class="contactInfo" id="contactAnchor">
 
-            <img src="./assets/img/logo_footer.png" alt="Official Logo of the Bon Hotel in White Color">
+            <img class="logoFooter" src="./assets/img/logo_footer.png"
+                alt="Official Logo of the Bon Hotel in White Color">
 
-            <p class="contactInfoFooter">
+            <p class="info">
                 Bon Hotels Head Office
             </p>
 
-            <p class="contactInfoFooterPhone">
+            <p class="phone">
                 +27 434 344 432
             </p>
 
-            <p class="contactInfoFooterMail">
+            <p class="mail">
                 info@bonhotels.com
             </p>
 
         </article>
 
         <nav class="footerNav">
-            
+
             <ul>
-                <li><a href="">Our Hotels</a></li>
-                <li><a href="">Our Conferencing</a></li>
-                <li><a href="">Our Company</a></li>
-                <li><a href="">Hotel Design</a></li>
-                <li><a href="">Careers</a></li>
+                <li><a href="#">Our Hotels</a></li>
+                <li><a href="#">Our Conferencing</a></li>
+                <li><a href="#">Our Company</a></li>
+                <li><a href="#">Hotel Design</a></li>
+                <li><a href="#">Careers</a></li>
             </ul>
 
         </nav>
 
         <article class="subscribe">
 
-            <form></form>
+            <form>
+                <fieldset>
+                    <label for="text" class="labelSubscribe">Subcribe for Offers</label>
+                    <input type="text" placeholder="Email Address" class="input_mail">
+                    <button type="submit" class="submit yellowButton">Subscribe Now</button>
+                </fieldset>
+            </form>
 
         </article>
 
